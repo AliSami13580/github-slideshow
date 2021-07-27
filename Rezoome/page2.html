@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link href='http://www.fontonline.ir/css/BVahidBold.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/Mj_Silicon.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #headcontainer i {
+            font-size: 24px;
+            color: #543b75;
+            padding-left: 4px;
+        }
+        
+        #footercontainer i {
+            font-size: 30px;
+            color: rgb(172, 163, 163);
+            margin-top: -10px;
+        }
+        
+        body {
+            width: 100%;
+            background-image: url(img/backgroundPicture.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #headcontainer ul {
+            display: flex;
+            background-color: #eee;
+            opacity: 0.8;
+            justify-content: flex-end;
+            width: 70%;
+            margin-left: 15%;
+            border-radius: 3px;
+        }
+        
+        #headcontainer li {
+            list-style: none;
+            margin: 1% 2%;
+            padding-bottom: 9px;
+        }
+        
+        #headcontainer a {
+            text-align: right;
+            display: inline-block;
+            text-align: right;
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-weight: 600;
+        }
+        
+        .list:hover {
+            border-bottom: 2px solid;
+            transition: 0.2s;
+        }
+        
+        #bodycontainer {
+            width: 70%;
+            margin-left: 15%;
+            background-color: black;
+        }
+        
+        #footercontainer {
+            width: 70%;
+            height: 9%;
+            margin-left: 15%;
+            background-color: rgb(19, 14, 37);
+            position: static;
+            bottom: 0px;
+            color: white;
+            border-radius: 3px;
+            opacity: 0.8;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-size: 1.1rem;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        #footercontainer ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #footercontainer li {
+            list-style: none;
+            margin: 1% 1%;
+        }
+        
+        #leftfooter {
+            height: 9%;
+            margin-left: 15%;
+            display: inline-block;
+            position: static;
+            bottom: 0px;
+            color: whitesmoke;
+            padding-left: 7px;
+            padding-top: 4px;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        
+        #cotactme a :hover {
+            background: hsla(287, 23%, 65%, 1);
+            background: linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -moz-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -webkit-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B190BA", endColorstr="#E8B595", GradientType=1);
+            color: #000;
+            padding: 4px;
+            transition: .2s;
+            border-radius: 3px;
+        }
+        
+        .bodycontainer {
+            display: flex;
+            background-color: white;
+            justify-content: flex-end;
+            width: 65%;
+            margin-left: 17.5%;
+            font-family: "Times New Roman", Times, serif;
+            box-shadow: rgba(250, 250, 250, 0.438) 0px 5px 15px;
+        }
+        
+        #text {
+            width: 65%;
+            margin-left: 17.5%;
+            background-color: white;
+            padding: 10px;
+            font-family: BYekan, 'BYekan', tahoma;
+            box-shadow: rgba(250, 250, 250, 0.438) 0px 5px 15px;
+        }
+        
+        #text p {
+            direction: rtl;
+            text-align: right;
+            font-size: 1.2rem;
+        }
+        
+        #text h2 {
+            direction: rtl;
+            text-align: right;
+            color: #543b75;
+        }
+        
+        .book {
+            width: 100%;
+            height: 50%;
+            /* display: inline-block; */
+            border: 2px solid #000;
+            padding-top: 1%;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-bottom: 2%;
+            margin: 1% 4%;
+            text-align: center;
+        }
+        /* #mainbody {
+            width: 65%;
+            margin-left: 17.5%;
+            background-color: white;
+            text-align: right;
+        } */
+        
+        #top {
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 43px;
+            font-size: 1.5rem;
+            background-color: rgb(61, 158, 248);
+            display: inline-block;
+            border-radius: 15%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-weight: bold;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                console.log($(this).scrollTop())
+                if ($(this).scrollTop() > 100) {
+                    $("#top").fadeIn();
+                } else {
+                    $("#top").fadeOut();
+                }
+            })
+            $("#top").click(function(e) {
+                e.preventDefault();
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 500)
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <a href="#" id="top"><i class="fad fa-arrow-to-top"></i></a>
+    <div id="headcontainer">
+        <ul>
+            <li class="list">
+                <a href="page6.html">سرگرمی<i class="fad fa-gamepad-alt"></i></a>
+            </li>
+            <li class="list">
+                <a href="page5.html">موسیقی<i class="fas fa-guitars"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="page4.html">کامپیوتر<i class="fad fa-computer-classic"></i></a>
+            </li>
+            <li class="list">
+                <a href="page3.html">تحصیلات<i class="fad fa-graduation-cap"></i></a>
+            </li>
+            <li class="list" id="English">
+                <a href="page2.html">زبان انگلیسی<i class="fad fa-books"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="index.html">خانه<i class="fad fa-home-lg"></i></a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="mainbody">
+        <div class="bodycontainer">
+            <div class="book"><img src="img/upin.png" alt="">Market Leader Intermediate</div>
+            <div class="book"><img src="img/in.jpg" alt="">Market Leader pre-intermediate</div>
+            <div class="book"><img src="img/elemetor.jpg" alt="">Market Leader Elementary </div>
+        </div>
+        <div class="bodycontainer">
+            <div class="book"><img src="img/worsskillA.jpg" alt="">Oxford Word Skills Advanced</div>
+            <div class="book"><img src="img/wordi.jpg" alt="">Oxford Word Skills Intermediate</div>
+            <div class="book"><img src="img/thumbnail.jpg" alt="">Collocations in Use English 2nd Intermediate</div>
+        </div>
+        <div id="text">
+            <p>امروزه بازار جهانی سریع تر از همیشه در حال تغییر و تحول است. دیگر کسب و کار و تجارت صرفا به یک مرز و بوم محدود نمی شود. نگرش تمام ادم های موفق مدرن فرا مرزی است. موفقیت در زمینه کسب و کار فقط با بهره گیری از دانش اولیه و داشتن تجربه در یک
+                رشته یا حرفه خاص به دست نمی آید. موفقیت نیازمند دانش عمیق نسبت به اصول روان شناختی بازار و تسلط بر فنون بیان و اصول رفتاری در محیط کار و با مشتریان است. شاید بتوان با تجربه و دانش اندک به موفقیت های بسیار کوچک دست یافت، اما لازمه به دست
+                آوردن دست اوردهای بزرگ و شکست شاخ غول موفقیت و پیروزی در نبرد با دیو موانع و مشکلات همه و همه نیازمند مجهز کردن خود به یک سری قاعده و قانون است.</p><br>
+            <p>مجموعه کتبMarket Leader بخشی از یک دوره آموزشی انگلیسی جدید در زمینه کسب و کار است که تغییر و تحول بازار کسب و کار جهانی را منعکس می کند. با استفاده از منابع گسترده رسانه عظیمی چون فایننشال تایمز و نیز سایر منابع ارزشمند دیگر هر آن چیزی که
+                زبان آموز برای اشنایی و موفقیت در عرصه کسب و کار نیاز دارد را با استانداردهای بالا فراهم اورده است. به طوری که هر زبان اموز با هر سطحی از آموزه های آن به اندازه کافی بهره خواهد برد.</p><br>
+            <p>مسائل و مهارت های ضروری کسب و کار در زمان کنونی و دیگر موضوعاتی از قبیل تجارت الکترونیک، ریسک، بازاریابی بین المللی و مدیریت بحران از مسائل مهم زمانه است که در این کتاب به خوبی به آنها پرداخته شده و نیز مطالعات موردی در هر سطح برای تمرین واقعی
+                و درست مهارت های کلیدی کسب و کار ارائه گردیده است. همچنین، تنوع انتخاب و انعطاف پذیری مطالب و نیز طیف گسترده ای از اجزای سازنده و مکمل برای بالا بردن کارایی این کتب حین تدریس برای حمایت بیشتر معلمان در دسترس قرار گرفته است. علاوه بر این،
+                مطالب بیشتری در زمینه دستور زبان و موارد کابرد آن، و همچنین موضوعات متنوع و خاص از جمله قانون کسب و کار، بانکداری و حسابداری، و مدیریت بین المللی همه و همه برای هدفی مشخص و واضح که ان اماده ساختن زبان آموز برای ورود به بازار کسب و کار
+                است، با ساختاری اصولی و حساب شده ارائه گردیده است. این مجموعه کتب آموزشی کسب و کار در سطوح مبتدی، مبتدی تا متوسط، متوسط، متوسط تا پیشرفته و پیشرفته موجود است.</p><br>
+            <h2>ویرایش جدید کتاب های مارکت لیدر</h2>
+
+            <p>
+                Market Leader 100٪ متون جدید برای تقویت مهارت خواندن با استفاده از منابع Financial Times 100٪ مطالعات موردی جدید همراه با نظرات و راهنمایی های مشاوران برجسته و موفق در دنیای واقعی کسب و کار 100٪ متون جدید برای تقویت مهارت شنیداری که منعکس کننده ماهیت
+                جهانی کسب و کار است که البته بر روی دی وی دی جدید این مجموعه ارائه می گردد بخش جدید گسترش کسب و کار در همه فرهنگ ها که بر مسائل خاص فرهنگی متمرکز است نیز بر روی دی وی دی و کتب ارائه می شود ویدئوهای معتبر از FT.com با تمرین و آزمون های
+                قابل چاپ و متنوع تمام متون لازم برای تقویت مهارت شنیداری در دسترس زبان آموز قرار گرفته که تمامی از منابع موثق و معتبر برای بهره وری هرچه بیشتر گرداوری شده است برنامه آموزش واژگان iGlossary آموزش تمام مهارت های کسب و کار به صورت یک پارچه
+                و با رویکردی مبتنی بر وظیفه در جهت تقویت و ارتقای مهارت هایی چون سخنرانی، مذاکره، حضور در جلسات و گفت و گوهای کوتاه. کتاب Market Leader نسخه Flexi Editions برای دوره های فشرده بسیار مفید هستند. این نسخه نیمی از کتاب اصلی را به همراه نیمی
+                از فایل های تمرینی با یکدیگر ترکیب می کند. خواندن این نسخه کوتاه شده در مدت زمان کوتاهی (40 تا 60 ساعت) برای دوره های کوتاه تابستانی مفید است. زبان انگلیسی که زبان آموزان با گذراندن این دوره می آموزند نه تنها برای کسب و کار بلکه برای مطالعات
+                بیشتر در سطوح اکادمیک نیز بسیار کارامد و تاثیرگذار است. مصاحبه ها، مطالعات موردی و محتوای معتبر و آزموده شده محیط کسب و کار جهان واقعی را در کلاس درس شبیه سازی می کند و علاقه و شوق زبان اموزان نسبت به بازار جهانی کسب و کار را فزون می کند.</p>
+        </div>
+    </div>
+    <div id="footercontainer">:ارتباط با من
+
+        <ul id="cotactme">
+
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-instagram" ></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-telegram-plane"></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <div id="leftfooter" ">Call: <br> Address:
+        </div>
+        </ul>
+        
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link href='http://www.fontonline.ir/css/BVahidBold.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/Mj_Silicon.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #top {
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 43px;
+            font-size: 1.5rem;
+            background-color: rgb(61, 158, 248);
+            display: inline-block;
+            border-radius: 15%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-weight: bold;
+        }
+        
+        #headcontainer i {
+            font-size: 24px;
+            color: #543b75;
+            padding-left: 4px;
+        }
+        
+        #footercontainer i {
+            font-size: 30px;
+            color: rgb(172, 163, 163);
+            margin-top: -10px;
+        }
+        
+        body {
+            width: 100%;
+            background-image: url(img/backgroundPicture.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #headcontainer ul {
+            display: flex;
+            background-color: #eee;
+            opacity: 0.8;
+            justify-content: flex-end;
+            width: 70%;
+            margin-left: 15%;
+            border-radius: 3px;
+        }
+        
+        #headcontainer li {
+            list-style: none;
+            margin: 1% 2%;
+            padding-bottom: 9px;
+        }
+        
+        #headcontainer a {
+            text-align: right;
+            display: inline-block;
+            text-align: right;
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-weight: 600;
+        }
+        
+        .list:hover {
+            border-bottom: 2px solid;
+            transition: 0.2s;
+        }
+        
+        #bodycontainer {
+            width: 65%;
+            margin-left: 17.5%;
+            background-color: white;
+            box-shadow: rgba(250, 250, 250, 0.438) 0px 5px 15px;
+            font-family: BYekan, 'BYekan', tahoma;
+        }
+        
+        #bodycontainer p {
+            direction: rtl;
+            text-align: right;
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+        
+        #footercontainer {
+            width: 70%;
+            height: 9%;
+            margin-left: 15%;
+            background-color: rgb(19, 14, 37);
+            position: static;
+            bottom: 0px;
+            color: white;
+            border-radius: 3px;
+            opacity: 0.8;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-size: 1.1rem;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        #footercontainer ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #footercontainer li {
+            list-style: none;
+            margin: 1% 1%;
+        }
+        
+        #leftfooter {
+            height: 9%;
+            margin-left: 15%;
+            display: inline-block;
+            position: static;
+            bottom: 0px;
+            color: whitesmoke;
+            padding-left: 7px;
+            padding-top: 4px;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        
+        #cotactme a :hover {
+            background: hsla(287, 23%, 65%, 1);
+            background: linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -moz-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -webkit-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B190BA", endColorstr="#E8B595", GradientType=1);
+            color: #000;
+            padding: 4px;
+            transition: .2s;
+            border-radius: 3px;
+        }
+        
+        .pics {
+            margin: 0 auto;
+            display: block;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                console.log($(this).scrollTop())
+                if ($(this).scrollTop() > 100) {
+                    $("#top").fadeIn();
+                } else {
+                    $("#top").fadeOut();
+                }
+            })
+            $("#top").click(function(e) {
+                e.preventDefault();
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 1000)
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div id="headcontainer">
+        <ul>
+            <li class="list">
+                <a href="page6.html">سرگرمی<i class="fad fa-gamepad-alt"></i></a>
+            </li>
+            <li class="list">
+                <a href="page5.html">موسیقی<i class="fas fa-guitars"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="page4.html">کامپیوتر<i class="fad fa-computer-classic"></i></a>
+            </li>
+            <li class="list">
+                <a href="page3.html">تحصیلات<i class="fad fa-graduation-cap"></i></a>
+            </li>
+            <li class="list">
+                <a href="page2.html">زبان انگلیسی<i class="fad fa-books"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="index.html">خانه<i class="fad fa-home-lg"></i></a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="bodycontainer">
+        <img src="img/business.jpg" alt="" class="pics">
+        <p>مدیریت بازرگانی یک رشته تحصیلی در مقطع کارشناسی است، این رشته ابتدا در کشور فرانسه و از دانشگاه ESCP Europe شروع شده‌ است، رشته مدیریت بازرگانی به دانشجویان مهارت‌های اداره سازمان را آموزش می‌دهد، همچنین به بحث در مورد چگونگی کنترل سود، سرمایه،
+            هزینه و استفادهٔ بهینه از امکانات موجود می‌پردازد.</p>
+        <p>می‌توان گفت که هدف از این رشته موارد زیر است: <br>آشنایی دقیق با وظایف اساسی سازمان‌های بازرگانی <br>افزایش مهارت و توانایی دانشجویان در شناخت مسائل مبتنی بر مدیریت <br>جمع‌آوری و تجزیه و تحلیل اطلاعات مرتبط به هر یک از این مسائل<br> ارزیابی راه‌حل‌های
+            مختلف در مورد هر مسئله، تصمیم‌گیری و اجرای تصمیمات می‌باشد.</p>
+        <img src="img/icdl.jpg" alt="" class="pics">
+        <p>دوره ICDL چیست؟ واژه ICDL مخفف International Computer Driving Licence مهارت هفت گانه ای در زمینه کامپیوتر می باشد. یادگیری مهارت های هفت گانه ICDL بیانگر کفایت در مهارتهای کامپیوتری است. از این رو سازمانی که در نظر دارد به نیروی انسانی یا کارمندان
+            خود آموزش دهد باید اطمینان حاصل کند، پولی که به این برنامه اختصاص داده است، به خوبی صرف می شود. <br> اهمیت یادگیری و کاربرد علوم مهارت های هفت گانه ICDL به قدری واضح و حیاتی است که بسیاری از سازمان ها و حتی کشورها در طرح های آتی و توسعه ای
+            خود یکی از استراتژی های اصلی خود را به آن اختصاص داده اند.</p>
+        <p>اهداف برگزارای دوره ICDL عبارتند از : <br> ارتقای سطح توانائیها در IT<br> ارتقای سطح کارایی در شرکتها<br> ایجاد توانایی در کارفرمایان برای سرمایه گذاری موثر در فناروری اطلاعات<br> تضمین استفاده بهینه از حداکثر مهارت و توانایی کارمندان در محیط
+            کار
+        </p>
+        <img src="img/programing.jpg" alt="" class="pics">
+        <p>UI‌ چیست؟</p>
+        <p>UI مخفف عبارت User Interface Design به معنای طراحی رابط کاربری است. در واقع UI طراحی بخشی از وب‌سایت یا اپلیکیشن است که کاربر آن را مشاهده می‌کند و بیشتر به جنبه‌ی گرافیکی موضوع می‌پردازد. اینکه ظاهر هر بخش به چه صورت باشد تا جلوه‌ی مناسبی به
+            وب‌سایت دهد را طراح بخش UI مشخص می‌کند.</p>
+        <p>طراحی رابط کاربری به کمک گرافیست‌های سایت و برنامه‌نویس Front-end پیاده سازی می‌شود. طراحی رابط کاربری مهم است زیرا کاربر مستقیماً با آن ارتباط دارد و معمولاً افراد به وب‌سایت‌هایی با UI ضعیف، کمتر اعتماد می‌کنند.</p>
+        <p>UX چیست؟‌</p>
+        <p>UX مخفف عبارت User Experience Design به معنای طراحی تجربه‌ی کاربری است. به احساسات و راحتی کاربر حین کار کردن با اجزای مختلف سایت گفته می‌شود و جوانب تعامل کاربر را با هر بخش در نظر می‌گیرد. اینکه وب‌سایت ما طوری طراحی شده باشد که هر بخش به راحتی
+            در دسترس کاربران قرار بگیرد و برای کار کردن با هر قسمت آسودگی و راحتی کاربر در نظر گرفته شود اینها مسائلی از طراحی UX‌ هستند.</p>
+        <p>البته ناگفته نماند که این فقط جنبه‌ای از طراحی UX بود. جنبه‌ی دوم آن به هدایت کاربر مرتبط می‌شود. اینکه چگونه ما کاربران یک صفحه را به صفحه‌ی دلخواه خود هدایت کنیم. اینکه چگونه کاربر اهداف ما را در وب‌سایت دنبال کند. در واقع بعد دوم تجربه‌ی کاربری
+            به مدیریت و هدایت کاربر از لحظه‌ی ورود به سایت تا لحظه‌ی خرید محصول (یا هر هدف دیگر) اشاره می‌کند.</p>
+    </div>
+    <div id="footercontainer">:ارتباط با من
+
+        <ul id="cotactme">
+
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-instagram" ></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-telegram-plane"></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <div id="leftfooter" class="iconfooter">Call: <br> Address:
+            </div>
+        </ul>
+    </div>
+
+</body>
+<a href="#" id="top"><i class="fad fa-arrow-to-top"></i></a>
+
+</html>

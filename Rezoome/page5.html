@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link href='http://www.fontonline.ir/css/BVahidBold.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/Mj_Silicon.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/BNarm.css' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #top {
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 43px;
+            font-size: 1.5rem;
+            background-color: rgb(61, 158, 248);
+            display: inline-block;
+            border-radius: 15%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-weight: bold;
+        }
+        
+        #headcontainer i {
+            font-size: 24px;
+            color: #543b75;
+            padding-left: 4px;
+        }
+        
+        #footercontainer i {
+            font-size: 30px;
+            color: rgb(172, 163, 163);
+            margin-top: -10px;
+        }
+        
+        body {
+            width: 100%;
+            background-image: url(img/backgroundPicture.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #headcontainer ul {
+            display: flex;
+            background-color: #eee;
+            opacity: 0.8;
+            justify-content: flex-end;
+            width: 70%;
+            margin-left: 15%;
+            border-radius: 3px;
+        }
+        
+        #headcontainer li {
+            list-style: none;
+            margin: 1% 2%;
+            padding-bottom: 9px;
+        }
+        
+        #headcontainer a {
+            text-align: right;
+            display: inline-block;
+            text-align: right;
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-weight: 600;
+        }
+        
+        .list:hover {
+            border-bottom: 2px solid;
+            transition: 0.2s;
+        }
+        
+        #bodycontainer {
+            width: 65%;
+            margin-left: 17.5%;
+            background-color: white;
+            box-shadow: rgba(250, 250, 250, 0.438) 0px 5px 15px;
+        }
+        
+        #footercontainer {
+            width: 70%;
+            height: 9%;
+            margin-left: 15%;
+            background-color: rgb(19, 14, 37);
+            position: static;
+            bottom: 0px;
+            color: white;
+            border-radius: 3px;
+            opacity: 0.8;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-size: 1.1rem;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        #footercontainer ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #footercontainer li {
+            list-style: none;
+            margin: 1% 1%;
+        }
+        
+        #leftfooter {
+            height: 9%;
+            margin-left: 15%;
+            display: inline-block;
+            position: static;
+            bottom: 0px;
+            color: whitesmoke;
+            padding-left: 7px;
+            padding-top: 4px;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        
+        #cotactme a :hover {
+            background: hsla(287, 23%, 65%, 1);
+            background: linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -moz-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -webkit-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B190BA", endColorstr="#E8B595", GradientType=1);
+            color: #000;
+            padding: 4px;
+            transition: .2s;
+            border-radius: 3px;
+        }
+        
+        .guitar {
+            width: 80%;
+            display: block;
+            line-height: 100%;
+            margin: 0 auto;
+            background: hsla(0, 8%, 36%, 1);
+            background: linear-gradient(90deg, hsla(0, 8%, 36%, 0.8) 0%, hsla(253, 50%, 48%, 0.9) 48%, hsla(0, 8%, 36%, 0.8) 100%);
+            background: -moz-linear-gradient(90deg, hsla(0, 8%, 36%, 0.8) 0%, hsla(253, 50%, 48%, 0.9) 48%, hsla(0, 8%, 36%, 0.8) 100%);
+            background: -webkit-linear-gradient(90deg, hsla(0, 8%, 36%, 0.8) 0%, hsla(253, 50%, 48%, 0.9) 48%, hsla(0, 8%, 36%, 0.8) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#645656", endColorstr="#573DB7", GradientType=1);
+        }
+        
+        .guitar h1 {
+            direction: rtl;
+            display: inline;
+            position: relative;
+            right: -100px;
+            bottom: 400px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 50px;
+            font-family: BNarm, 'BNarm', tahoma;
+            cursor: pointer;
+            background-color: rgb(39, 54, 66);
+            color: #eee;
+            box-shadow: rgba(250, 250, 250, 0.438) 0px 5px 15px;
+        }
+        
+        .guitarpic {
+            padding: 5%;
+            display: inline-block;
+            transform: rotate(15deg);
+            position: relative;
+            right: -200px;
+            animation-name: guitar1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes guitar1 {
+            from {
+                top: 0;
+            }
+            to {
+                top: 10px;
+            }
+        }
+        /* #guitar1 {
+            animation-name: guitar1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        } */
+    </style>
+    <script src="js/jquery-3.6.0.js"></script>
+
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                console.log($(this).scrollTop())
+                if ($(this).scrollTop() > 100) {
+                    $("#top").fadeIn();
+                } else {
+                    $("#top").fadeOut();
+                }
+            })
+            $("#top").click(function(e) {
+                e.preventDefault();
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 1000)
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <div id="headcontainer">
+        <ul>
+            <li class="list">
+                <a href="page6.html">سرگرمی<i class="fad fa-gamepad-alt"></i></a>
+            </li>
+            <li class="list">
+                <a href="page5.html">موسیقی<i class="fas fa-guitars"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="page4.html">کامپیوتر<i class="fad fa-computer-classic"></i></a>
+            </li>
+            <li class="list">
+                <a href="page3.html">تحصیلات<i class="fad fa-graduation-cap"></i></a>
+            </li>
+            <li class="list">
+                <a href="page2.html">زبان انگلیسی<i class="fad fa-books"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="index.html">خانه<i class="fad fa-home-lg"></i></a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="bodycontainer">
+        <div class="guitar">
+            <h1>گیتار کلاسیک</h1>
+            <img src="img/classicguitar.png" alt="" class="guitarpic" id="guitar1">
+
+        </div>
+        <div class="guitar">
+            <h1>گیتار آکوئستیک</h1>
+            <img src="img/aquesticguitar.png" alt="" class="guitarpic" id="guitar2">
+
+        </div>
+        <div class="guitar">
+            <h1>گیتار الکتریک</h1>
+            <img src="img/electricguitar.png" alt="" class="guitarpic" id="guitar3">
+
+        </div>
+    </div>
+    <div id="footercontainer">:ارتباط با من
+
+        <ul id="cotactme">
+
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-instagram" ></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-telegram-plane"></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <div id="leftfooter" class="iconfooter">Call: <br> Address:
+            </div>
+        </ul>
+    </div>
+    <a href="#" id="top"><i class="fad fa-arrow-to-top"></i></a>
+</body>
+
+</html>

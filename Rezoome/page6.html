@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link href='http://www.fontonline.ir/css/BVahidBold.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/Mj_Silicon.css' rel='stylesheet' type='text/css'>
+    <link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
+
+    <title>سرگرمی</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #top {
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            line-height: 43px;
+            font-size: 1.5rem;
+            background-color: rgb(61, 158, 248);
+            display: inline-block;
+            border-radius: 15%;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            font-weight: bold;
+        }
+        
+        #textcontainer {
+            font-family: BYekan, 'BYekan', tahoma;
+            direction: rtl;
+            text-align: right;
+            padding: 8px;
+            font-size: 1.2rem;
+        }
+        
+        #headcontainer i {
+            font-size: 24px;
+            color: #543b75;
+            padding-left: 4px;
+        }
+        
+        #footercontainer i {
+            font-size: 30px;
+            color: rgb(172, 163, 163);
+            margin-top: -10px;
+        }
+        
+        body {
+            width: 100%;
+            background-image: url(img/backgroundPicture.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        #headcontainer ul {
+            display: flex;
+            background-color: #eee;
+            opacity: 0.8;
+            justify-content: flex-end;
+            width: 70%;
+            margin-left: 15%;
+            border-radius: 3px;
+        }
+        
+        #headcontainer li {
+            list-style: none;
+            margin: 1% 2%;
+            padding-bottom: 9px;
+        }
+        
+        #headcontainer a {
+            text-align: right;
+            display: inline-block;
+            text-align: right;
+            text-decoration: none;
+            color: black;
+            font-size: 1.4rem;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-weight: 600;
+        }
+        
+        .list:hover {
+            border-bottom: 2px solid;
+            transition: 0.2s;
+        }
+        
+        #bodycontainer {
+            width: 65%;
+            margin-left: 17.5%;
+            background-color: #ffff;
+            box-shadow: rgba(250, 250, 250, 0.438) 0px 5px 15px;
+        }
+        
+        #footercontainer {
+            width: 70%;
+            height: 9%;
+            margin-left: 15%;
+            background-color: rgb(19, 14, 37);
+            position: static;
+            bottom: 0px;
+            color: white;
+            border-radius: 3px;
+            opacity: 0.8;
+            font-family: BVahidBold, 'BVahidBold', tahoma;
+            font-size: 1.1rem;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        #footercontainer ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #footercontainer li {
+            list-style: none;
+            margin: 1% 1%;
+        }
+        
+        #leftfooter {
+            height: 9%;
+            margin-left: 15%;
+            display: inline-block;
+            position: static;
+            bottom: 0px;
+            color: whitesmoke;
+            padding-left: 7px;
+            padding-top: 4px;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        
+        #cotactme a :hover {
+            background: hsla(287, 23%, 65%, 1);
+            background: linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -moz-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            background: -webkit-linear-gradient(90deg, hsla(287, 23%, 65%, 1) 0%, hsla(23, 64%, 75%, 1) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#B190BA", endColorstr="#E8B595", GradientType=1);
+            color: #000;
+            padding: 4px;
+            transition: .2s;
+            border-radius: 3px;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        /* Caption text */
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.335);
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                console.log($(this).scrollTop())
+                if ($(this).scrollTop() > 200) {
+                    $("#top").fadeIn();
+                } else {
+                    $("#top").fadeOut();
+                }
+            })
+            $("#top").click(function(e) {
+                e.preventDefault();
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 1000)
+            })
+
+        })
+    </script>
+</head>
+
+<body><a href="#" id="top"><i class="fad fa-arrow-to-top"></i></a>
+    <div id="headcontainer">
+        <ul>
+            <li class="list">
+                <a href="page6.html">سرگرمی<i class="fad fa-gamepad-alt"></i></a>
+            </li>
+            <li class="list">
+                <a href="page5.html">موسیقی<i class="fas fa-guitars"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="page4.html">کامپیوتر<i class="fad fa-computer-classic"></i></a>
+            </li>
+            <li class="list">
+                <a href="page3.html">تحصیلات<i class="fad fa-graduation-cap"></i></a>
+            </li>
+            <li class="list">
+                <a href="page2.html">زبان انگلیسی<i class="fad fa-books"></i></a>
+            </li>
+
+            <li class="list">
+                <a href="index.html">خانه<i class="fad fa-home-lg"></i></a>
+            </li>
+
+        </ul>
+    </div>
+    <div id="bodycontainer">
+        <div class="slideshow-container">
+
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="img/horizon-zero-dawn-3840x2160-action-role-playing-playstation-4-xbox-9439.jpg" style="width: 100%;" />
+                <div class="text">Horizon Zero Dawn</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="img/watch-dogs-legion-5120x2880-e3-2019-poster-5k-21665.jpg" style="width: 100%;" />
+                <div class="text">Watch Dogs</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="img/spider-man-miles-morales-3840x2160-screenshot-4k-23168.jpg" style="width: 100%;" />
+                <div class="text">Spider Man</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="img/how-i-met-your-mother-how-i-met-your-dad.jpg" style="width: 100%;" />
+                <div class="text">How I Met Your Mother</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="img/BreakigBad.jpeg" style="width: 100%;" />
+                <div class="text">Breaking Bad</div>
+            </div>
+        </div>
+        <br/>
+        <div style="text-align: center;">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            ShowSlides();
+
+            function ShowSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+
+                setTimeout(ShowSlides, 4000);
+            }
+        </script>
+        <div id="textcontainer">
+            <h2>10 حقیقت جالب و خواندنی در مورد سریال بریکینگ بد:</h2>
+            <p>1- کاراکتر جسی پینکمن قرار بود که در انتهای فصل اول بمیرد اما آرون پال با بازی خویش چنان تاثیری بر سازندگان سریال گذاشت که تا آخر سریال حضورش را مستدام کرد.</p>
+            <p>2- فیلم The Avengers نیز همزمان در همان استودیویی فیلمبرداری می شد که این سریال در آنجا فیلمبرداری می شد.</p>
+            <p>3- نام هایزنبرگ در حقیقت ادای دینی به ورنر هایزنبرگ، شیمی دان بزرگ است که نظریه سرعت الکترون او، نظریه بسیار مشهوری در علم شیمی است.</p>
+            <p>4- «برکینگ بد» در حقیقت یک اصطلاح با لهجه جنوبی در انگلیس است به معنای کسی که برای مدتی کوتاه یا بلند بر اثر یک اشتباه، از راه راست منحرف شده است.</p>
+            <p>5- تعداد قسمت های این سریال 62 قسمت است که در جدول تناوبی عناصر، عنصر 62 ایزوتوپی است که برای درمان سرطان ریه به کار می رود.</p>
+            <p>6- برخی از صحنه های بیابان به شکل مخفیانه فیلمبرداری شده است. زیرا گروه مجوز این کار را نداشته است! مانند همان سکانس اول از قسمت اول سریال.</p>
+            <p>7- برومین و باریوم که با حروف اختصاری Br و Ba در لوگوی فیلم استفاده شده است، هیچ ربطی به ساخت متامفتامین یا همان شیشه ندارد و تنها برای استفاده اسمی از این دو عنصر استفاده شده است.</p>
+            <p>8- این سریال در مجموع 47 جایزه از آن خود کرده است.</p>
+            <p>9- نکته جالب اینجاست که این سریال با زیرنویس فارسی اورژینال از طرف سازندگان در اختیار مخاطبان گذاشته شده است، اما نسخه دی وی دی که در ایران فروخته می شود، زیرنویسی متفاوت دارد و اورژینال نیست! (طبعا دلیلش دانلود شرکت پخش کننده آن است نه خرید
+                اورژینال آن!)
+            </p>
+            <p>10- فرمول شیمیایی که در ابتدای تیتراژ هر فصل دیده می شود، در حقیقت فرمول اصلی ساخت شیشه یا همان متامفتامین است.</p>
+        </div>
+    </div>
+    <div id="footercontainer">:ارتباط با من
+
+        <ul id="cotactme">
+
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-instagram" ></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-telegram-plane"></i></a>
+            </li>
+            <li>
+                <a href="" class="iconfooter"><i class="fab fa-whatsapp"></i></a>
+            </li>
+            <div id="leftfooter" class="iconfooter">Call: <br> Address:
+            </div>
+        </ul>
+    </div>
+
+</body>
+
+</html>
